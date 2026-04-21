@@ -26,7 +26,7 @@
     position: relative;
 }
 
-.cabecalhoNavListItemInput{
+.cabecalhoNavListInput{
     width: 100%;
     height: 100%;
     padding: 24px 20px;
@@ -47,4 +47,33 @@
     width: 24px;
     height: 24px;
     pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+    .cabecalhoNavList{
+        grid-template-areas: 
+        "logo sobre login perfil carrinho"
+        "input input input input input";
+        grid-template-columns: 1fr 2fr .5fr .5fr .5fr;
+    }
+
+    .cabecalhoLogo{
+        grid-area: logo;
+        justify-self: center;
+    }
+    .cabecalhoNavListItem-Sobre{
+        grid-area: sobre;
+    }
+    .cabecalhoNavListItem-Login{
+        grid-area: login;
+    }
+    .cabecalhoNavListItem-Perfil{
+        grid-area: perfil;
+    }
+    .cabecalhoNavListItem-Carrinho{
+        grid-area: carrinho;
+    }
+    .cabecalhoNavListItem-Input{
+        grid-area: input;
+    }
 }
