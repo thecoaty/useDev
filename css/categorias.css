@@ -1,0 +1,63 @@
+.categoriasList{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "roupas roupas decoracao"
+    "canecas acessorios acessorios";
+    gap: 24px;
+    list-style-type: none;
+}
+.categoriasListItem-roupas{
+    grid-area: roupas;
+}
+.categoriasListItem-decoracao{
+    grid-area: decoracao;
+}
+.categoriasListItem-canecas{
+    grid-area: canecas;
+}
+.categoriasListItem-acessorios{
+    grid-area: acessorios;
+}
+.categoriasListItemContainer img{
+    height: 331px;
+    width: 100%;
+    object-fit: contain;
+}
+.categoriasListItemContainer{
+    background-color: var(--cor-links);
+    text-align: center;
+}
+.categoriasListItem{
+    box-shadow: 0px 4px 24px 0px #7B7B7B26;
+}
+.categorias{
+    padding: 80px 12.5%;
+
+}
+.categoriasTitulo{
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    font-family: var(--fonte-titulo);
+    color: var(--cor-texto-principal);
+    margin-bottom: 40px;
+}
+.categoriasTexto{
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto-secundario);
+    margin-bottom: 40px;
+}
+.categoriasListItemTitulo{
+    font-size: 31px;
+    font-weight: 700;
+    line-height: 37.2px;
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto-principal);
+    padding: 16px 0;
+    text-align: center;
+}

@@ -1,0 +1,100 @@
+.rodapeLinha{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.rodapeLinha:last-child{
+    border-top: 1.5px solid var(--cor-destaque-secundario);
+    padding-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+}
+.rodapeColunaList-cartao{
+    display: inline-grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 16px;
+    list-style-type: none;
+}
+.rodapeColunaList-redes{
+    display: inline-grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 16px;
+    list-style-type: none;
+}
+.rodape{
+    padding: 60px 12.5%;
+    background-color: var(--cor-texto-principal);
+    margin: 0 auto;
+}
+.rodapeColunaTitulo{
+    font-family: var(--fonte-texto);
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--cor-texto);
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+.rodapeColunaLogo img{
+    width: 79.61px;
+    height: 48px;
+}
+.rodapeColunaLogoTexto{
+    font-family: var(--fonte-texto);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--cor-destaque-secundario);
+    line-height: 19.2px;
+}
+
+.rodapeColunaList{
+    list-style-type: none;
+    color: var(--cor-texto);
+    font-family: var(--fonte-texto);
+    font-size: 16px;
+    line-height: 19.2px;
+}
+.rodapeColunaListItem a{
+    color: var(--cor-texto);
+    text-decoration: none;
+}
+.rodapeColunaListItem{
+    margin-bottom: 8px;
+}
+.rodapeColunaListItem:last-child{
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px){
+    .rodapeLinha:first-child{
+        display: grid;
+        grid-template-areas: 
+        "logo logo logo"
+        "funcionamento institucional informacoes";
+        justify-content: space-between;
+        column-gap: 68px;
+    }
+    .rodapeLinha:first-child .rodapeColuna:nth-child(2){
+        grid-area: funcionamento;
+        margin-bottom: 24px;
+    }
+    .rodapeLinha:first-child .rodapeColuna:nth-child(3){
+        grid-area: institucional;
+    }
+    .rodapeLinha:first-child .rodapeColuna:nth-child(4){
+        grid-area: informacoes;
+    }
+    .rodapeLinha:first-child .rodapeColunaLogo{
+        grid-area: logo;
+        text-align: center;
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+        border-bottom: 1.5px solid var(--cor-destaque-secundario);
+    }
+    .rodapeLinha:last-child{
+        border-top: none;
+        padding-top: 0;
+    }
+}
